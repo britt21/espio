@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="languages_list">
+        <item>@string/lang_list_english</item>
+        <item>@string/lang_list_farsi</item>
+        <item>@string/lang_list_arabic</item>
+        <item>@string/lang_list_tagalog</item>
+        <item>@string/lang_list_spanish</item>
+    </string-array>
+</resources>

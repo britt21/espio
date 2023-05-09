@@ -1,0 +1,293 @@
+<resources>
+    <string name="app_name">DemoApp</string>
+    <string name="title_activity_purchase">Purchase</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Placeholder -->
+    <string name="default_text" translatable="false">default</string>
+
+    <!-- LoginActivity -->
+    <string name="welcome">Welcome!</string>
+    <string name="enter_operator_long">Enter your Operator ID to get started</string>
+    <string name="prompt_email">OPERATOR ID</string>
+    <string name="prompt_password">PASSWORD</string>
+    <string name="action_sign_in">Log In</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This operator ID is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing input completions."
+    </string>
+    <string name="toast_timeout">Session timed out!</string>
+
+    <!-- HelpPageActivity -->
+    <string name="help">HELP</string>
+    <string name="help_title">Help Menu</string>
+    <string name="version_information">VERSION INFORMATION</string>
+    <string name="contact_information">CONTACT INFORMATION</string>
+    <string name="app_version">AMP-BaseApp %1$s</string>
+    <string name="app_timestamp">%1$s</string>
+    <string name="ampcmpnt_version">AMPCMPNT LIB %1$s</string>
+    <string name="ampcmpnt_timestamp">%1$s</string>
+    <string name="ampemvl2_version">AMPEMVL2 LIB %1$s</string>
+    <string name="ampemvl2_timestamp">%1$s</string>
+    <string name="lib_version">AMP CMPNT LIB Version [1.0.0]</string>
+    <string name="lib_build_date">Build [Dec 18 2017 12:00:00]</string>
+    <string name="please_contact">Please contact the AMP help desk if you require technical assistance</string>
+    <string name="tel_num">+1 (905) 597-2333</string>
+    <string name="help_email">helpdesk@amobilepayment.com</string>
+    <string name="copyright">2007 Advanced Mobile Payment Inc.</string>
+
+    <!-- MenuActivity -->
+    <string name="description_transaction">Sale, Forcepost, Refund, ...</string>
+    <string name="description_recall">Recall Trace, Amount, Acount Number, ...</string>
+    <string name="description_reprint">Reprint Last Record, Past Record, ...</string>
+    <string name="description_reports">Business Day, Batch, ...</string>
+    <string name="description_community">Check Mail, Read, Delete</string>
+    <string name="description_admin">Settlement, Sign out, ...</string>
+    <string name="description_processor">Param download, TMS, Clear Memory, ...</string>
+    <string name="title_trans">TRANSACTIONS</string>
+    <string name="title_trans_sale">SALE</string>
+    <string name="title_trans_force">FORCE POST</string>
+    <string name="title_trans_void">VOID</string>
+    <string name="title_trans_refund">REFUND</string>
+    <string name="title_trans_ebt">EBT</string>
+    <string name="title_trans_preauth">PREAUTH</string>
+    <string name="title_trans_completion">COMPLETION</string>
+    <string name="title_rec">TRANSACTION RECALL</string>
+    <string name="title_rec_trace">RECALL BY TRACE</string>
+    <string name="title_rec_all">RECALL ALL</string>
+    <string name="title_rec_amount">RECALL BY AMOUNT</string>
+    <string name="title_rec_acct_num">RECALL BY ACCOUNT #</string>
+    <string name="title_reprint">REPRINT</string>
+    <string name="title_reprint_last_record">REPRINT LAST RECORD</string>
+    <string name="title_reprint_past_record">REPRINT PAST RECORD</string>
+    <string name="title_reprint_past_record_trace">RECALL BY TRACE #</string>
+    <string name="title_reprint_past_record_amount">RECALL BY AMOUNT</string>
+    <string name="title_reprint_past_record_account">RECALL BY ACCOUNT #</string>
+    <string name="title_reprint_past_record_invoice">RECALL BY INVOICE #</string>
+    <string name="title_reprint_past_record_preauth">RECALL PREAUTH BY INVOICE</string>
+    <string name="description_reprint_past_record">Find by Trace, Account, Invoice, ...</string>
+    <string name="title_reprint_last_sett">REPRINT LAST SETTLEMENT</string>
+    <string name="title_reports">REPORTS</string>
+    <string name="title_reports_bus_day">BUSINESS DAY</string>
+    <string name="title_reports_batch">BATCH</string>
+    <string name="title_reports_emv">EMV REPORTS</string>
+    <string name="title_community">COMMUNITY</string>
+    <string name="title_community_check">CHECK MAIL</string>
+    <string name="title_community_read">READ MAIL</string>
+    <string name="title_community_delete">DELETE ALL</string>
+    <string name="title_admin_trans">ADMIN TRANSACTIONS</string>
+    <string name="title_admin_trans_sett">SETTLEMENT</string>
+    <string name="title_admin_trans_sign_out">SIGN OUT OPERATOR</string>
+    <string name="title_admin_trans_purge">PURGE BATCH</string>
+    <string name="title_admin_trans_manage">ADMIN MANAGEMENT</string>
+    <string name="title_processor">PROCESSOR / SERVICES</string>
+    <string name="title_processor_param_dl">PARAMETER DOWNLOAD</string>
+    <string name="title_processor_tms">TMS SETTINGS</string>
+    <string name="title_processor_clear_mem">CLEAR MEMORY</string>
+    <string name="title_processor_comm_test">COMM. TEST</string>
+    <string name="title_processor_maintenance">MAINTENANCE</string>
+    <string name="title_processor_up_logs">UPLOAD LOGS</string>
+    <string name="title_processor_demo_mode">DEMO MODE</string>
+
+    <!-- Transaction class -->
+    <string name="enter_operator_password">Enter operator password:</string>
+
+    <!-- AmountEntryActivity -->
+    <string name="enter_amount">Enter amount</string>
+    <string name="enter_cashback_amount">Enter cashback amount</string>
+    <string name="enter_surcharge_amount">Enter surcharge amount</string>
+    <string name="enter_forcepost_amount">Enter force post amount</string>
+    <string name="enter_refund_amount">Enter refund amount</string>
+    <string name="enter_amount_recall">Enter amount to recall</string>
+    <string name="enter_tax_amount">Enter tax amount</string>
+    <string name="enter_amount_default_amount" translatable="false">0.00</string>
+
+    <!-- OperatorIDEntryActivity -->
+    <string name="enter_operator_id">ENTER OPERATOR ID</string>
+
+    <!-- TipEntryActivity -->
+    <string name="tip">Tip</string>
+    <string name="tip_amount">Enter Tip amount</string>
+    <string name="tip_none">NONE</string>
+
+    <!-- AmountSummaryActivity -->
+    <string name="account_summary">Summary</string>
+    <string name="amount">Amount</string>
+    <string name="cashback">Cashback</string>
+    <string name="Surcharge">Surcharge</string>
+    <string name="total">Total</string>
+
+    <!-- CardEntryManualActivity -->
+    <string name="card_number">Card Number</string>
+
+    <!-- TurnUnitTowardsActivity -->
+    <string name="turn_unit">Turn unit towards the customer</string>
+
+    <!-- TransactionDetailsVoidActivity -->
+    <!-- TransactionDetailsPrintActivity -->
+    <string name="transaction_type">Transaction</string>
+    <string name="invoice_no">Invoice #</string>
+    <string name="card_no">Card #</string>
+    <string name="prn_no">PRN</string>
+    <string name="void_amount">Amount</string>
+    <string name="trace_no">Trace #</string>
+    <string name="auth_no">Auth #</string>
+    <string name="date_time">Date/Time</string>
+    <string name="voided">Voided</string>
+    <string name="void_void">VOID</string>
+
+    <!-- HostCommunication -->
+    <string name="title_host_communication">Host Communication</string>
+    <string name="hc_receiving">Receiving</string>
+    <string name="hc_sending">Sending</string>
+    <string name="enter">ENTER</string>
+    <string name="cancel">CANCEL</string>
+
+    <!-- ReceiptActivity-->
+    <string name="printing_receipt">Printing receipt</string>
+    <string name="merchant_copy">Merchant copy</string>
+    <string name="customer_copy">Customer copy</string>
+
+    <!-- Settings -->
+    <string name="pref_op_mgt_head" translatable="false">OPERATOR MANAGEMENT</string>
+    <string name="pref_op_mgt_key" translatable="false">op_mgt</string>
+    <string name="pref_op_mgt_add" translatable="false">Add operator</string>
+    <string name="pref_op_mgt_add_key" translatable="false">pref_op_mgt_add_key</string>
+    <string name="pref_op_mgt_reset_pwd" translatable="false">Reset password</string>
+    <string name="pref_op_mgt_reset_pwd_key" translatable="false">pref_op_mgt_reset_pwd_key</string>
+    <string name="pref_op_mgt_rm_op" translatable="false">Remove operator</string>
+    <string name="pref_op_mgt_rm_op_key" translatable="false">pref_op_mgt_rm_op_key</string>
+    <string name="pref_op_mgt_show" translatable="false">Display list</string>
+    <string name="pref_op_mgt_show_key" translatable="false">pref_op_mgt_show_key</string>
+    <string name="pref_com_head" translatable="false">COMMUNICATION</string>
+    <string name="pref_com_key" translatable="false">pref_com_key</string>
+    <string name="pref_com_conn" translatable="false">Connection setup</string>
+    <string name="pref_com_conn_key" translatable="false">pref_com_conn_key</string>
+    <string name="pref_com_conf" translatable="false">Configuration details</string>
+    <string name="pref_com_conf_key" translatable="false">pref_com_conf_key</string>
+    <string name="pref_conf_head" translatable="false">CONFIGURATION REPORTS</string>
+    <string name="pref_conf_key" translatable="false">pref_conf_key</string>
+    <string name="pref_conf_term_detail" translatable="false">Terminal detail</string>
+    <string name="pref_conf_term_detail_key" translatable="false">pref_conf_term_detail_key</string>
+    <string name="pref_conf_acq_detail" translatable="false">Acquirer detail</string>
+    <string name="pref_conf_acq_detail_key" translatable="false">pref_conf_acq_detail_key</string>
+    <string name="pref_conf_emv_detail" translatable="false">EMV parameter detail</string>
+    <string name="pref_conf_emv_detail_key" translatable="false">pref_conf_emv_detail_key</string>
+    <string name="pref_conf_comm_detail" translatable="false">Communication detail</string>
+    <string name="pref_conf_comm_detail_key" translatable="false">pref_conf_comm_detail_key</string>
+    <string name="pref_conf_security_detail" translatable="false">Security detail</string>
+    <string name="pref_conf_security_detail_key" translatable="false">pref_conf_security_detail_key</string>
+    <string name="pref_diag_head" translatable="false">DIAGNOSTIC REPORTS</string>
+    <string name="pref_diag_key" translatable="false">pref_diag_key</string>
+    <string name="pref_diag_print" translatable="false">Print</string>
+    <string name="pref_diag_print_key" translatable="false">pref_diag_print_key</string>
+    <string name="pref_diag_tms" translatable="false">TMS</string>
+    <string name="pref_diag_tms_key" translatable="false">pref_diag_tms_key</string>
+    <string name="pref_gen_head" translatable="false">GENERAL</string>
+    <string name="pref_gen_key" translatable="false">pref_gen_key</string>
+    <string name="pref_gen_demo_mode" translatable="false">Demo Mode</string>
+    <string name="pref_gen_demo_key" translatable="false">pref_gen_demo_key</string>
+    <string name="pref_gen_demo_mode_desc" translatable="false">Enable demo mode for this device</string>
+    <string name="pref_gen_beep" translatable="false">Beep</string>
+    <string name="pref_gen_beep_key" translatable="false">pref_gen_beep</string>
+    <string name="pref_gen_beep_summ" translatable="false">Enable beep sound on key press</string>
+    <string name="pref_gen_auto_date_key" translatable="false">pref_gen_auto_time</string>
+    <string name="pref_gen_auto_date_head" translatable="false">Automatic date and time</string>
+    <string name="pref_gen_auto_date_desc" translatable="false">Use host time</string>
+    <string name="pref_gen_man_date_key" translatable="false">pref_gen_man_date_key</string>
+    <string name="pref_gen_man_date_head" translatable="false">Set date</string>
+    <string name="pref_gen_man_time_key" translatable="false">pref_gen_man_time_key</string>
+    <string name="pref_gen_man_time_head" translatable="false">Set time</string>
+    <string name="pref_gen_language" translatable="false">Language</string>
+    <string name="pref_gen_language_key" translatable="false">app_lang</string>
+    <string name="pref_sys_info_head" translatable="false">SYSTEM INFORMATION</string>
+    <string name="pref_sys_info_key" translatable="false">pref_gen_sys_info_key</string>
+    <string name="pref_sys_info_print" translatable="false">Print</string>
+    <string name="pref_sys_info_print_key" translatable="false">pref_sys_info_print_key</string>
+    <string name="pref_sys_info_display" translatable="false">Display</string>
+    <string name="pref_sys_info_display_key" translatable="false">pref_sys_info_display_key</string>
+    <string name="app_started_standalone" translatable="false">app_started_standalone</string>
+    <string name="app_auto_start_set" translatable="false">app_auto_start_set</string>
+
+    <!-- AMPEMVCB -->
+    <string name="no_pin_entered" translatable="false">No PIN entered</string>
+    <string name="transaction_cancel" translatable="false">Transaction is cancelled!</string>
+    <string name="remove_card" translatable="false">REMOVE CARD</string>
+    <string name="approved" translatable="false">APPROVED</string>
+
+    <!-- local notification strings -->
+    <!-- take note that there are also notification strings coming from .cpp codes -->
+    <string name="notification_cancelled">Cancelled</string>
+    <string name="notification_try_again">Please try again</string>
+    <string name="notification_expired_card">Expired card</string>
+    <string name="notification_card_not_support">Card not supported</string>
+    <string name="notification_customer_signature">Please capture customer signature</string>
+    <string name="notification_imprint_card">Imprint card</string>
+    <string name="notification_enter_continue">Press ENTER key to continue</string>
+    <string name="notification_transaction_voided">Transaction voided</string>
+    <string name="notification_printing_progress">Printing in progress</string>
+    <string name="notification_please_wait">Please wait</string>
+
+    <!-- generic dialog strings -->
+    <string name="dialog_cancel_current_transaction">Are you sure you want to cancel?</string>
+    <string name="are_you_sure">Are you sure?</string>
+    <string name="dialog_yes">Yes</string>
+    <string name="dialog_no">No</string>
+    <string name="dialog_ok">OK</string>
+
+    <!-- CVVEntryActivity -->
+    <string name="enter_cvv">Enter CVV</string>
+
+    <!-- Card Present Activity -->
+    <string name="card_present">Card present?</string>
+
+    <!-- Card Type Select Activity -->
+    <string name="select_card_type">Card type</string>
+    <string name="select_card_credit">Credit</string>
+    <string name="select_card_debit">Debit</string>
+
+    <!-- Account Select Activity -->
+    <string name="select_account">Select account</string>
+    <string name="select_acc_check">Chequing</string>
+    <string name="select_acc_savings">Savings</string>
+
+    <!-- Void Process Select Activity -->
+    <string name="select_void_by">Void by</string>
+    <string name="select_void_invoice">Invoice #</string>
+    <string name="select_void_trace">Trace #</string>
+    <string name="select_void_reference">Reference #</string>
+    <string name="select_void_auth">Auth #</string>
+    <string name="select_void_card">Card #</string>
+
+    <!-- ExpiryEntryActivity -->
+    <string name="enter_expiry">Enter expiry date</string>
+
+    <!-- GenericListActivityvity -->
+    <string name="select_language">Select language</string>
+
+    <!-- Transaction Names -->
+    <string name="sale_transaction">Sale</string>
+    <string name="forcepost_transaction">Force Post</string>
+    <string name="refund_transaction">Refund</string>
+    <string name="preauth_transaction">Pre-Auth</string>
+    <string name="completion_transaction">Completion</string>
+
+    <!-- Password fields -->
+    <string name="alphanumeric">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890</string>
+
+    <!-- World Languages and Codes -->
+    <string name="lang_list_english">English</string>
+    <string name="lang_list_farsi">Farsi</string>
+    <string name="lang_list_arabic">Arabic</string>
+    <string name="lang_list_tagalog">Tagalog</string>
+    <string name="lang_list_spanish">Spanish</string>
+    <string name="lang_list_portuguese">Portuguese</string>
+    <string name="lang_list_french">Francais</string>
+    <string name="world_lang_code_en" translatable="false">EN</string>
+    <string name="world_lang_code_es" translatable="false">ES</string>
+    <string name="world_lang_code_pt" translatable="false">PT</string>
+    <string name="world_lang_code_fr" translatable="false">FR</string>
+</resources>

@@ -1,0 +1,56 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="appbar_height">50dp</dimen>
+    <dimen name="appbar_elevation">4dp</dimen>
+    <dimen name="material_resting_elevation">2dp</dimen>
+    <dimen name="material_resting_elevation_amp_button">4dp</dimen>
+    <dimen name="product_icon_size">48dp</dimen>
+    <dimen name="system_icon_size">24dp</dimen>
+
+    <!-- Custom -->
+    <dimen name="divider_thickness">1dp</dimen>
+    <dimen name="white_spacer_point_five">8dp</dimen>
+    <dimen name="white_spacer_regular">16dp</dimen>
+    <dimen name="white_spacer_one_point_five">24dp</dimen>
+    <dimen name="white_spacer_times_two">32dp</dimen>
+    <dimen name="white_spacer_times_three">48dp</dimen>
+
+    <!-- Home Activity (aka LoginActivity)-->
+    <dimen name="home_button_size">100dp</dimen>
+
+    <!-- Amount Entry Activity -->
+    <dimen name="button_number_width">100dp</dimen>
+    <dimen name="button_number_height">65dp</dimen>
+    <dimen name="button_font_size">30dp</dimen>
+    <dimen name="font_size_amount">35dp</dimen>
+
+    <!-- Tip Entry Activity -->
+    <dimen name="tip_button_height">52dp</dimen>
+
+    <!-- Menu Activity -->
+    <dimen name="menu_icon_size">75dp</dimen>
+    <dimen name="menu_height_main">150dp</dimen>
+    <dimen name="menu_height_sub">100dp</dimen>
+    <dimen name="menu_height_sub_sub">66dp</dimen>
+    <dimen name="menu_sub_vertical_spacing">8dp</dimen>
+
+    <dimen name="activity_title_height">60dp</dimen>
+    <dimen name="container_max_width">350dp</dimen>
+    <dimen name="container_min_width">330dp</dimen>
+
+    <dimen name="font_size_user_entry">40sp</dimen>
+    <dimen name="font_size_title">25sp</dimen>
+    <dimen name="font_size_subtitle">20sp</dimen>
+    <dimen name="font_size_content">15sp</dimen>
+    <dimen name="font_size_note">10sp</dimen>
+
+    <dimen name="button_width">150dp</dimen>
+    <dimen name="button_height">50dp</dimen>
+
+    <!-- "dialog" -->
+    <dimen name="dimmer_elevation">6dp</dimen>
+    <dimen name="dialog_elevation">7dp</dimen>
+</resources>

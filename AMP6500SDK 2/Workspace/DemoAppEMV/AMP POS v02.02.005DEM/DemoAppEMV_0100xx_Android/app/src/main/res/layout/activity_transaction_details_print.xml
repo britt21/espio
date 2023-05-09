@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Flow.TransactionDetailsActivity">
+
+    <include
+        android:id="@+id/include2"
+        layout="@layout/header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/screen_title"
+        style="@style/AMPFontBook_section_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="@dimen/material_resting_elevation"
+        android:gravity="center"
+        android:padding="@dimen/white_spacer_point_five"
+        android:text="Screen Title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include2" />
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/dimmer"
+        android:elevation="@dimen/dimmer_elevation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/include2" />
+
+    <!-- FIXME: width should be based on content size -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/activity_vertical_margin"
+        android:background="@color/white"
+        android:elevation="@dimen/dialog_elevation"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_vertical_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/screen_title">
+
+        <!-- Transaction and Invoice -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/label_transaction"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:fontFamily="sans-serif-light"
+                android:textSize="@dimen/font_size_content"
+                tools:text="Transaction" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center"
+                android:text=":"
+                android:textSize="@dimen/font_size_content" />
+
+            <TextView
+                style="@style/AMPFontBook_body_copy"
+                android:id="@+id/tv_transaction"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:textSize="19sp"
+                android:textAlignment="viewEnd"
+                tools:text="Sale" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/label_invoice_number"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:fontFamily="sans-serif-light"
+                android:textSize="@dimen/font_size_content"
+                tools:text="Invoice #" />
+
+            <TextView
+                android:fontFamily="sans-serif-light"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="@dimen/font_size_content"
+                android:gravity="center"
+                android:text=":" />
+
+            <TextView
+                style="@style/AMPFontBook_body_copy"
+                android:id="@+id/tv_invoice_number"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:textSize="19sp"
+                android:textAlignment="viewEnd"
+                tools:text="00035" />
+
+        </LinearLayout>
+
+        <!-- Card number and PRN -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/label_card_number"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:fontFamily="sans-serif-light"
+                android:textSize="@dimen/font_size_content"
+                tools:text="Card Number" />
+
+            <TextView
+                android:fontFamily="sans-serif-light"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="@dimen/font_size_content"
+                android:text=":" />
+
+            <TextView
+                style="@style/AMPFontBook_body_copy"
+                android:id="@+id/tv_card_number"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:textSize="19sp"
+                android:textAlignment="viewEnd"
+                tools:text="************0046" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/label_prn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:fontFamily="sans-serif-light"
+                android:textAlignment="viewStart"
+                android:textSize="@dimen/font_size_content"
+                tools:text="RRN Number" />
+
+            <TextView
+                android:fontFamily="sans-serif-light"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="@dimen/font_size_content"
+                android:text=":" />
+
+            <TextView
+                style="@style/AMPFontBook_body_copy"
+                android:id="@+id/tv_prn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:textAlignment="viewEnd"
+                android:textSize="19sp"
+                tools:text="000701640553" />
+
+        </LinearLayout>
+
+        <!-- Amount and Trace number -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/label_amount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:fontFamily="sans-serif-light"
+                android:textSize="@dimen/font_size_content"
+                tools:text="Amount" />
+
+            <TextView
+                android:fontFamily="sans-serif-light"
+                android:textSize="@dimen/font_size_content"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text=":" />
+
+            <TextView
+                style="@style/AMPFontBook_body_copy"
+                android:id="@+id/tv_amount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:textAlignment="viewEnd"
+                android:textSize="19sp"
+                tools:text="$ 43.65" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/label_trace_number"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:fontFamily="sans-serif-light"
+                android:textAlignment="viewStart"
+                android:textSize="@dimen/font_size_content"
+                tools:text="Trace #" />
+
+            <TextView
+                android:textSize="@dimen/font_size_content"
+                android:fontFamily="sans-serif-light"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text=":" />
+
+            <TextView
+                style="@style/AMPFontBook_body_copy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:text="000009"
+                android:textAlignment="viewEnd"
+                android:textSize="19sp" />
+
+        </LinearLayout>
+
+        <!-- Auth and Date/Time -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/label_auth_number"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:fontFamily="sans-serif-light"
+                android:textSize="@dimen/font_size_content"
+                tools:text="Auth. #" />
+
+            <TextView
+                android:textSize="@dimen/font_size_content"
+                android:fontFamily="sans-serif-light"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text=":" />
+
+            <TextView
+                style="@style/AMPFontBook_body_copy"
+                android:id="@+id/tv_auth_number"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:textAlignment="viewEnd"
+                android:textSize="19sp"
+                tools:text="234087" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/label_date_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:fontFamily="sans-serif-light"
+                android:textAlignment="viewStart"
+                android:textSize="@dimen/font_size_content"
+                tools:text="Date/Time" />
+
+            <TextView
+                android:textSize="@dimen/font_size_content"
+                android:fontFamily="sans-serif-light"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text=":" />
+
+            <TextView
+                style="@style/AMPFontBook_body_copy"
+                android:id="@+id/tv_date_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:textAlignment="viewEnd"
+                android:textSize="19sp"
+                tools:text="03/06 16:30" />
+
+        </LinearLayout>
+
+        <!-- Voided -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/label_voided"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:fontFamily="sans-serif-light"
+                android:textSize="@dimen/font_size_content"
+                tools:text="Voided" />
+
+            <TextView
+                android:textSize="@dimen/font_size_content"
+                android:fontFamily="sans-serif-light"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text=":" />
+
+            <TextView
+                style="@style/AMPFontBook_body_copy"
+                android:id="@+id/tv_voided"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:textAlignment="viewEnd"
+                android:textSize="19sp"
+                tools:text="N" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_three_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <TextView
+                    android:fontFamily="sans-serif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="&lt; "
+                    android:textColor="@color/turquoise"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:fontFamily="sans-serif"
+                    android:id="@+id/tv_summary_previous"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/turquoise"
+                    android:textSize="20sp"
+                    tools:text="PREV" />
+
+                <TextView
+                    android:fontFamily="sans-serif"
+                    android:id="@+id/tv_summary_next"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/turquoise"
+                    android:textSize="20sp"
+                    tools:text="NEXT" />
+
+                <TextView
+                    android:fontFamily="sans-serif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" &gt;"
+                    android:textColor="@color/turquoise"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/tv_summary_cancel"
+                style="@style/AMPButton_style_turquoise"
+                tools:text="CANCEL" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_two_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/btncancel"
+                style="@style/AMPButton_style_grey"
+                android:layout_width="0dp"
+                android:layout_marginEnd="@dimen/white_spacer_point_five"
+                android:layout_marginStart="@dimen/white_spacer_point_five"
+                android:layout_weight="1"
+                tools:text="@string/default_text" />
+
+            <Button
+                android:id="@+id/btnenter"
+                style="@style/AMPButton_style_turquoise"
+                android:layout_width="0dp"
+                android:layout_marginEnd="@dimen/white_spacer_point_five"
+                android:layout_marginStart="@dimen/white_spacer_point_five"
+                android:layout_weight="1"
+                tools:text="@string/default_text" />
+
+        </LinearLayout>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

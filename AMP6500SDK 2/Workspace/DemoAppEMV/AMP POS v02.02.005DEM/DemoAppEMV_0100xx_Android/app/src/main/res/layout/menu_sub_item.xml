@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/menu_height_sub"
+    android:orientation="horizontal"
+    android:elevation="2dp"
+    android:background="@drawable/ripple_effect">
+
+    <!-- Left: Menu description -->
+    <RelativeLayout
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:padding="@dimen/activity_vertical_margin">
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/AMPFontBook_menu_header"
+                android:id="@+id/menu_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/default_text"/>
+            <TextView
+                android:fontFamily="sans-serif-light"
+                android:id="@+id/menu_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="@string/default_text" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- Grey divider -->
+    <View
+        android:layout_width="@dimen/divider_thickness"
+        android:layout_height="match_parent"
+        android:background="@color/button_grey"/>
+
+    <!-- Right: Menu image -->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:padding="@dimen/activity_vertical_margin">
+        <ImageView
+            android:id="@+id/menu_image"
+            android:layout_height="@dimen/menu_icon_size"
+            android:layout_width="@dimen/menu_icon_size"
+            android:src="@drawable/menu_item_transactions" />
+    </RelativeLayout>
+</LinearLayout>

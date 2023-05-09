@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Communication -->
+    <com.amobilepayment.demo.Settings.AMPPreferenceCategory
+        tools:title="COMMUNICATION"
+        android:key="@string/pref_com_key">
+        <Preference
+            tools:title="Connection Setup"
+            android:key="@string/pref_com_conn_key"/>
+        <Preference
+            tools:title="Configuration Report"
+            android:key="@string/pref_com_conf_key"/>
+    </com.amobilepayment.demo.Settings.AMPPreferenceCategory>
+
+    <!-- Configuration Reports -->
+    <com.amobilepayment.demo.Settings.AMPPreferenceCategory
+        tools:title="CONFIGURATION REPORTS"
+        android:key="@string/pref_conf_key">
+        <Preference
+            tools:title="Terminal Detail"
+            android:key="@string/pref_conf_term_detail_key" />
+        <Preference
+            tools:title="Acquirer Detail"
+            android:key="@string/pref_conf_acq_detail_key" />
+        <Preference
+            tools:title="EMV Parameter Detail"
+            android:key="@string/pref_conf_emv_detail_key" />
+        <Preference
+            tools:title="Communication Detail"
+            android:key="@string/pref_conf_comm_detail_key" />
+        <Preference
+            tools:title="Security Detail"
+            android:key="@string/pref_conf_security_detail_key" />
+    </com.amobilepayment.demo.Settings.AMPPreferenceCategory>
+
+    <!-- Diagnostic Reports -->
+    <com.amobilepayment.demo.Settings.AMPPreferenceCategory
+        tools:title="DIAGNOSTIC REPORTS"
+        android:key="@string/pref_diag_key">
+        <Preference
+            tools:title="Print"
+            android:key="@string/pref_diag_print_key"/>
+        <Preference
+            tools:title="TMS"
+            android:key="@string/pref_diag_tms_key"/>
+    </com.amobilepayment.demo.Settings.AMPPreferenceCategory>
+
+    <!-- General -->
+    <com.amobilepayment.demo.Settings.AMPPreferenceCategory
+        tools:title="GENERAL"
+        android:key="@string/pref_gen_key">
+        <CheckBoxPreference
+            android:key="@string/pref_gen_beep_key"
+            tools:title="Beep"
+            android:summary="@string/default_text"
+            android:defaultValue="true" />
+        <SwitchPreference
+            android:key="@string/pref_gen_demo_key"
+            android:summary="@string/default_text"
+            tools:title="Demo Mode"
+            android:defaultValue="false"/>
+        <!--<CheckBoxPreference-->
+            <!--android:key="@string/pref_gen_auto_date_key"-->
+            <!--tools:title="Automatic date and time"-->
+            <!--android:summary="@string/default_text"-->
+            <!--android:defaultValue="false" />-->
+        <Preference
+            android:key="@string/pref_gen_man_date_key"
+            tools:title="Set date"
+            android:summary="February 14, 2018" />
+        <Preference
+            android:key="@string/pref_gen_man_time_key"
+            tools:title="Set time"
+            android:summary="17:00" />
+        <ListPreference
+            tools:title="Select Language"
+            android:key="@string/pref_gen_language_key"
+            tools:dialogTitle="@string/default_text" />
+    </com.amobilepayment.demo.Settings.AMPPreferenceCategory>
+
+    <!-- System information -->
+    <com.amobilepayment.demo.Settings.AMPPreferenceCategory
+        tools:title="SYSTEM INFORMATION"
+        android:key="@string/pref_sys_info_key">
+        <Preference
+            tools:title="Print"
+            android:key="@string/pref_sys_info_print_key"/>
+        <Preference
+            tools:title="Display"
+            android:key="@string/pref_sys_info_display_key"/>
+    </com.amobilepayment.demo.Settings.AMPPreferenceCategory>
+
+</PreferenceScreen>

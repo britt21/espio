@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="world_lang_codes">
+        <item>@string/world_lang_code_en</item>
+        <item>@string/world_lang_code_es</item>
+        <item>@string/world_lang_code_pt</item>
+        <item>@string/world_lang_code_fr</item>
+    </string-array>
+
+    <!-- JNI does not give the list of language names, only codes so we add names here-->
+    <string-array name="world_lang_names">
+        <item>@string/lang_list_english</item>
+        <item>@string/lang_list_spanish</item>
+        <item>@string/lang_list_portuguese</item>
+        <item>@string/lang_list_french</item>
+    </string-array>
+</resources>

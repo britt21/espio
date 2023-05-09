@@ -1,0 +1,105 @@
+package com.amobilepayment.demo.service;
+
+public class BaseChannelContract {
+
+    public static final int  OPER_AMOUNT_ENTRY = 1;
+    public static final int  OPER_CARD_ENTRY = 2;
+    public static final int  OPER_HOST_COMMS = 3;
+    public static final int  OPER_PIN_ENTRY = 4;
+    public static final int  OPER_RECEIPT_PRINT = 5;
+    public static final int  OPER_OPER_ID_ENTRY = 6;
+    public static final int  OPER_INV_NUM_ENTRY = 7;
+    public static final int  OPER_ADMIN_PASS_ENTRY = 8;
+    public static final int  OPER_TIP_SELECT = 9;
+    public static final int  OPER_TIP_AMOUNT_ENTRY = 10;
+    public static final int  OPER_TIP_PERCENT_ENTRY = 11;
+    public static final int  OPER_EMVCASHBACK_ENTRY = 12;
+    public static final int  OPER_CASHBACK_ENTRY = 13;
+    public static final int  OPER_SURCHARGE_ENTRY = 14;
+    public static final int  OPER_TOTAL_AMT_CONFIRM = 15;
+    public static final int  OPER_CHANGE_PW_CONFIRM = 16;
+    public static final int  OPER_AMT_CONFIRM = 17;
+    public static final int  OPER_SIGN_OUT_CONFIRM = 18;
+    public static final int  OPER_TRANS_CONFIRM = 19;
+    public static final int  OPER_CVV2_ENTRY = 20;
+    public static final int  OPER_CVV2_CONFIRM = 21;
+    public static final int  OPER_AVS_ENTRY = 22;
+    public static final int  OPER_PREDIAL = 23;
+    public static final int  OPER_CHECK_PRINTER_STAT = 24;
+    public static final int  OPER_OPER_NAME_ENTRY = 25;
+    public static final int  OPER_NEW_PWD_ENTRY = 26;
+    public static final int  OPER_VERIFY_PWD = 27;
+    public static final int  OPER_TABLE_NUM_ENTRY = 28;
+    public static final int  OPER_PASSWORD_ENTRY = 29;
+    public static final int  OPER_DISPLAY_TEXT = 30;
+    public static final int  OPER_CONFIRM_TEXT = 31;
+    public static final int  OPER_SUPER_PWD_ENTRY = 32;
+    public static final int  OPER_DISPLAY_TWO_OPTIONS = 33;
+    public static final int  OPER_ACCT_SELECTION = 34;
+    public static final int  OPER_OPER_PASSWORD_ENTRY = 35;
+    public static final int  OPER_CARD_PRESENT = 36;
+    public static final int  OPER_CARD_IMPRINT = 37;
+    public static final int  OPER_ADDRESS_ENTRY = 38;
+    public static final int  OPER_ZIPCODE_ENTRY = 39;
+    public static final int  OPER_AUTH_CODE_ENTRY = 40;
+    public static final int  OPER_TELLER_ID_ENTRY = 41;
+    public static final int  OPER_FOODSTAMP_ID_ENTRY = 42;
+    public static final int  OPER_EBT_VOUCHER_SN_ENTRY = 43;
+    public static final int  OPER_EBT_VOUCHER_CODE_ENTRY = 44;
+    public static final int  OPER_SUPPLIER_NUM_ENTRY = 45;
+    public static final int  OPER_CUSTOMER_NUM_ENTRY = 46;
+    public static final int  OPER_CHARGE_DESCRIPTOR_ENTRY = 47;
+    public static final int  OPER_ORDER_NUM_ENTRY = 48;
+    public static final int  OPER_REQUESTER_NAME_ENTRY = 49;
+    public static final int  OPER_TAX_EXEMPT_ENTRY = 50;
+    public static final int  OPER_LAST_FOUR_DIGIT_ENTRY = 51;
+    public static final int  OPER_VOID_BY_SELECTION = 52;
+    public static final int  OPER_TRACE_NUM_ENTRY = 53;
+    public static final int  OPER_REF_NUM_ENTRY = 54;
+    public static final int  OPER_AUTH_NUM_ENTRY = 55;
+    public static final int  OPER_CARD_NUM_ENTRY = 56;
+    public static final int  OPER_DISPLAY_TRANS_DETAILS = 57;
+    public static final int  OPER_TAX_AMOUNT_ENTRY = 58;
+    public static final int  OPER_DISPLAY_CARDTYPE_SELECT = 59;
+    public static final int  OPER_INVOICE_CONFIRM_TEXT = 60;
+    public static final int  OPER_DISPLAY_TRANS_CONFIRM = 61;
+    public static final int  OPER_DISPLAY_BATCH_RECORD = 62;
+    public static final int  OPER_PROMPT_SELECT_3_RECALL = 63;
+    public static final int  OPER_PROMPT_SELECT_2_RECALL = 64;
+    public static final int  OPER_PROMPT_SELECT_BILLPAYT = 65;
+    public static final int  OPER_PROMPT_SELECT_ECI = 66;
+    public static final int  OPER_ENTER_INSTALL_SEQ_NUM = 67;
+    public static final int  OPER_ENTER_INSTALL_SEQ_COUNT = 68;
+    public static final int  OPER_PROMPT_ENTRY_CANCEL = 69;
+    public static final int  OPER_PROMPT_GENERIC_ENTRY = 70;
+    public static final int  OPER_PROMPT_ENTER_RENT_DUR = 71;
+    public static final int  OPER_PROMPT_ENTER_STAY_DUR =72;
+    public static final int  OPER_ENTRY_TRANS_DATE = 73;
+    public static final int  OPER_ENTRY_TRANS_TIME = 74;
+    public static final int  OPER_ENTRY_TRANS_ID = 75;
+    public static final int  OPER_DISPLAY_OFFLINE_APPROVED = 76;
+    public static final int  OPER_PROMPT_BALANCE_RECEIPT = 77;
+    public static final int  OPER_SEARCH_PREAUTH = 78;
+    public static final int  OPER_PREAUTH_TRACE_ENTRY = 79;
+    public static final int  OPER_PREAUTH_INVOICE_ENTRY = 80;
+    public static final int  OPER_PREAUTH_REFNUM_ENTRY = 81;
+    public static final int  OPER_demo_ADMIN_LOGIN = 82;
+    public static final int  OPER_demo_ADMIN_LOGOUT = 83;
+    public static final int  OPER_TURN_UNIT_CUSTOMER = 84;
+    public static final int  OPER_END_TRANSACTION = 999;
+
+    // Recall operations
+    public static final int OPER_RECALL_TRACE               = 5001;
+    public static final int OPER_RECALL_AMOUNT              = 5002;
+    public static final int OPER_RECALL_ACCOUNT             = 5003;
+    public static final int OPER_RECALL_INVOICE             = 5004;
+    public static final int OPER_RECALL_PREAUTH_INVOICE     = 5005;
+
+    // Reprint operations
+    public static final int OPER_REPPASTREC_TRACE           = 6001;
+    public static final int OPER_REPPASTREC_AMOUNT          = 6002;
+    public static final int OPER_REPPASTREC_ACCOUNT         = 6003;
+    public static final int OPER_REPPASTREC_INVOICE         = 6004;
+    public static final int OPER_REPPASTREC_PREAUTH_INVOICE = 6005;
+
+}

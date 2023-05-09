@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_pale_grey"
+    android:orientation="vertical">
+
+    <include layout="@layout/header" />
+
+    <TextView
+        android:id="@+id/screen_title"
+        style="@style/AMPFontBook_section_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="@dimen/material_resting_elevation"
+        android:gravity="center"
+        android:padding="@dimen/white_spacer_point_five"
+        android:visibility="gone"
+        tools:text="Header" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:scrollbarThumbVertical="@null">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:background="@color/white"
+            android:elevation="@dimen/material_resting_elevation"
+            android:orientation="vertical"
+            android:paddingEnd="@dimen/activity_horizontal_margin"
+            android:paddingStart="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/white_spacer_point_five">
+
+            <TextView
+                android:id="@+id/prompt1"
+                style="@style/AMPFontBook_body_copy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                tools:text="Cancelled" />
+
+            <TextView
+                android:id="@+id/prompt2"
+                style="@style/AMPFontBook_body_copy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                tools:text="Cancelled" />
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_card_number"
+                    style="@style/AMPFontBook_amount_large"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:letterSpacing="0.1"
+                    android:paddingBottom="@dimen/white_spacer_point_five"
+                    android:paddingTop="@dimen/white_spacer_point_five"
+                    android:textSize="25sp"
+                    tools:text="1234 5678 9012 1234" />
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginEnd="@dimen/white_spacer_regular"
+                android:layout_marginStart="@dimen/white_spacer_regular"
+                android:background="@color/line_divider_color" />
+
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/btn1"
+                        style="@style/AMPFontBook_body_copy"
+                        android:layout_width="@dimen/button_number_width"
+                        android:layout_height="@dimen/button_number_height"
+                        android:background="@android:color/transparent"
+                        android:text="1"
+                        android:textSize="28.8sp" />
+
+                    <Button
+                        android:id="@+id/btn2"
+                        style="@style/AMPFontBook_body_copy"
+                        android:layout_width="@dimen/button_number_width"
+                        android:layout_height="@dimen/button_number_height"
+                        android:background="@android:color/transparent"
+                        android:text="2"
+                        android:textSize="28.8sp" />
+
+                    <Button
+                        android:id="@+id/btn3"
+                        style="@style/AMPFontBook_body_copy"
+                        android:layout_width="@dimen/button_number_width"
+                        android:layout_height="@dimen/button_number_height"
+                        android:background="@android:color/transparent"
+                        android:text="3"
+                        android:textSize="28.8sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/btn4"
+                        style="@style/AMPFontBook_body_copy"
+                        android:layout_width="@dimen/button_number_width"
+                        android:layout_height="@dimen/button_number_height"
+                        android:background="@android:color/transparent"
+                        android:text="4"
+                        android:textSize="28.8sp" />
+
+                    <Button
+                        android:id="@+id/btn5"
+                        style="@style/AMPFontBook_body_copy"
+                        android:layout_width="@dimen/button_number_width"
+                        android:layout_height="@dimen/button_number_height"
+                        android:background="@android:color/transparent"
+                        android:text="5"
+                        android:textSize="28.8sp" />
+
+                    <Button
+                        android:id="@+id/btn6"
+                        style="@style/AMPFontBook_body_copy"
+                        android:layout_width="@dimen/button_number_width"
+                        android:layout_height="@dimen/button_number_height"
+                        android:background="@android:color/transparent"
+                        android:text="6"
+                        android:textSize="28.8sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/btn7"
+                        style="@style/AMPFontBook_body_copy"
+                        android:layout_width="@dimen/button_number_width"
+                        android:layout_height="@dimen/button_number_height"
+                        android:background="@android:color/transparent"
+                        android:text="7"
+                        android:textSize="28.8sp" />
+
+                    <Button
+                        android:id="@+id/btn8"
+                        style="@style/AMPFontBook_body_copy"
+                        android:layout_width="@dimen/button_number_width"
+                        android:layout_height="@dimen/button_number_height"
+                        android:background="@android:color/transparent"
+                        android:text="8"
+                        android:textSize="28.8sp" />
+
+                    <Button
+                        android:id="@+id/btn9"
+                        style="@style/AMPFontBook_body_copy"
+                        android:layout_width="@dimen/button_number_width"
+                        android:layout_height="@dimen/button_number_height"
+                        android:background="@android:color/transparent"
+                        android:text="9"
+                        android:textSize="28.8sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/btnclr"
+                        style="@style/AMPFontBook_body_copy"
+                        android:layout_width="@dimen/button_number_width"
+                        android:layout_height="@dimen/button_number_height"
+                        android:background="@android:color/transparent"
+                        android:text="Clear"
+                        android:textAllCaps="false"
+                        android:textSize="16.8sp" />
+
+                    <Button
+                        android:id="@+id/btn0"
+                        style="@style/AMPFontBook_body_copy"
+                        android:layout_width="@dimen/button_number_width"
+                        android:layout_height="@dimen/button_number_height"
+                        android:background="@android:color/transparent"
+                        android:text="0"
+                        android:textSize="28.8sp" />
+
+                    <ImageView
+                        android:id="@+id/btnBack"
+                        android:layout_width="@dimen/button_number_width"
+                        android:layout_height="@dimen/button_number_height"
+                        android:padding="@dimen/white_spacer_regular"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/back_button" />
+                </TableRow>
+
+            </TableLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/white_spacer_point_five"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btncancel"
+                    style="@style/AMPButton_style_grey"
+                    android:layout_width="0dp"
+                    android:layout_margin="@dimen/white_spacer_point_five"
+                    android:layout_weight="1"
+                    tools:text="@string/default_text" />
+
+                <Button
+                    android:id="@+id/btnenter"
+                    style="@style/AMPButton_style_turquoise"
+                    android:layout_width="0dp"
+                    android:layout_margin="@dimen/white_spacer_point_five"
+                    android:layout_weight="1"
+                    tools:text="@string/default_text" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

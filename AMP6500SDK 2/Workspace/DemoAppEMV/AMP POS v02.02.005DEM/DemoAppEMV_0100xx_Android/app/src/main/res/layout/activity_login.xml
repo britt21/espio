@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+
+    tools:context="com.amobilepayment.demo.Main.LoginActivity"
+    tools:layout_editor_absoluteY="25dp"> <!-- Prevent focusing on the textviews on load-->
+
+    <!-- Login progress -->
+    <ImageView
+        android:id="@+id/desktop_logo"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="8dp"
+        android:paddingBottom="30dp"
+        android:paddingTop="30dp"
+        android:src="@drawable/amplogo_white_text"
+        app:layout_constraintBottom_toTopOf="@+id/tv_welcome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:fontFamily="sans-serif-medium"
+        android:paddingBottom="10dp"
+        android:textColor="@android:color/white"
+        android:textSize="27.5sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_enteryour"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Welcome!" />
+
+    <TextView
+        android:id="@+id/tv_enteryour"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-light"
+        android:paddingBottom="20dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_size_subtitle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Enter your Operator ID to get started" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="@dimen/home_button_size"
+        android:layout_height="@dimen/home_button_size"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/home_button_border"
+        android:elevation="2dp"
+        android:onClick="startMenuAsDesktop"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_enteryour">
+
+        <ImageView
+            android:id="@+id/imageView_desktop"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:src="@drawable/home_desktop" />
+
+        <TextView
+            android:id="@+id/tv_desktop"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            tools:layout_editor_absoluteX="86dp"
+            tools:layout_editor_absoluteY="405dp"
+            tools:text="Desktop" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="@dimen/home_button_size"
+        android:layout_height="@dimen/home_button_size"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/home_button_border"
+        android:elevation="2dp"
+        android:onClick="startMenuActivity"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/tv_enteryour">
+
+        <ImageView
+            android:id="@+id/imageView_menu"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:padding="0dp"
+            android:src="@drawable/home_menu" />
+
+        <TextView
+            android:id="@+id/tv_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:lines="2"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            tools:layout_editor_absoluteX="217dp"
+            tools:layout_editor_absoluteY="405dp"
+            tools:text="Main Menu" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

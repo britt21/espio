@@ -1,0 +1,395 @@
+Release notes for Version 03.00.012 (20200104)
+-----------------------------------------------------------------------------
+- Updated CAKeys.xml
+- Enabled CAKeys debug logs
+- Fixed double tap that causing 3secs delay in Linux
+
+Release notes for Version 03.00.011 (20201222)
+-----------------------------------------------------------------------------
+- Added handling of payNOT_ACCEPTED in the entry point module
+- Added EmvSetPostFinalAppSelectCB() callback function that allows the application 
+layer to perform customized post processing after final application selection
+- Added EmvSetNextStateFlow() and EmvSetCID() API functions that can be used to 
+bypass specific process of the EMV flow
+
+Release notes for Version 03.00.010 (20201110)
+-----------------------------------------------------------------------------
+- Added SetUseQuickChipAidList() to enable/disable the use of QuickChip.cfg 
+during QuickChip processing
+- Added gpiOpenCardReader() that can be used by application to open card reader
+- Added gpiPreTechnoPolling() to skip the close/open reader routine when 
+calling gpiTechnoPolling() API.
+- Added option to bypass contactless card removal, added BypassRemoveCard under 
+Contactless section in agnos.ini file
+	Example:
+		[Contactless]
+		BypassRemoveCard=No
+
+
+Release notes for Version 03.00.009 (20200619)
+-----------------------------------------------------------------------------
+- Added PACK preprocessor in order for application layer to align 
+with data strucutures of Agnos library
+- Added EmvSetMutualListCB() API that allows L3 layer to preprocess mutual 
+list before final app selection
+- Changed EmvSetUSDebitAIDListMode() to separate contact and contactless 
+configuration
+
+
+Release notes for Version 03.00.008 (20200617)
+-----------------------------------------------------------------------------
+- Added timeout parameter for cAMPAgnosEmv::RemoveChipCard function (in seconds).
+
+
+Release notes for Version 03.00.007 (20200224)
+-----------------------------------------------------------------------------
+- Changed EmvExcludeAidCB() callback
+- Fixed system error on enciphered card
+
+Release notes for Version 03.00.006 (20200218)
+-----------------------------------------------------------------------------
+- Fixed PBA-980 [TSYS ATTENDED] Contactless - Auto select Global Debit AID
+	- the root cause is unable to read tag5f55 and tag42 due to long tag-BF0C 
+	that causing unable to 	perfrom US Debit selection
+	- Changed the tlv parser to read these tags
+
+
+Release notes for Version 03.00.005 (20200217)
+-----------------------------------------------------------------------------
+
+
+- Added cAMPAgnosEmv::IsCardStillPresent() to detect if a card is still/
+currently inserted in the reader.
+
+Note: This function should only be used after the EMV Session, e.g. after EMV 
+Completion.
+
+
+Release notes for Version 03.00.004 (20200206)
+-----------------------------------------------------------------------------
+
+- Changed initializeFromFile() of Datamngr module
+- Opening, reading, and closing of files now accepts 0 as file descriptor.
+- Additional Android logs for gpiLog function.
+- Added compiler directive for compiling for AMP6700 - for Contactless.
+
+Release notes for Version 03.00.003 (20200130)
+------------------------------------------------------------------------------------
+- Added ExcludeAidCB() that allows the application layer to exclude the given 
+AID.
+	Note: 
+	1. Prepare your callback function with this prototype 
+		BOOL (*EmvExcludeAidCB)(const char *szAid);
+	2. Register your callback by calling 
+		void EmvSetExcludeAidCB(EmvExcludeAidCB cb); 	
+
+
+Release notes for Version 03.00.002EMV (20200127)
+------------------------------------------------------------------------------------
+- Updated CAKeys.xml, added UPI UnionPay CA keys
+- Implemented PBA-981 [TSYS UNATTENDED] Contactless - Auto select Global Debit AID
+	Note: See updated agnos.ini	
+		; USDebitModeCTLS
+		; 0: Highest Priority will be automatically selected
+		; 1: US Debit AID will be automatically selected
+		; 2: Manual US Debit Selection Process (see USDebitAIDList)
+		USDebitModeCTLS=0
+
+	Note for BaseApp:
+		TERMINAL.EMVOPTION.APPSEL.USDEBIT.CTLS.MODE=
+		PRIORITY = 0
+		AUTO = 1
+		MANUAL = 2
+	
+- Fixed PBA-957 Payfaco - CTLS Transaction canceled when the MSR Card was left 
+in insert (contact) slot
+- Added GetLanguageCodeOfId() that returns the lang code ("en") of input language id
+- Added EmvSetFlowCB() callback that allows L3 layer to control the EMV flow
+	Note: L3 can register callback with function prototype 
+		- void (*EmvFlowCB)(tAgnosState currentState, tBoolean *stop, tBoolean *bypass)
+
+
+Release notes for Version 03.00.01 (20191217)
+------------------------------------------------------------------------------------
+- Fixed ReadMagstripe()
+- Added CARD_ENTRY_TAP_MAG and CARD_ENTRY_FALLBACK in CARD_ENTRY
+
+Release notes for Version 03.00.01 (20181217)
+------------------------------------------------------------------------------------
+- Added configurable parameter to enable legacy contactless cards as follows:
+	- LegacyZIP=Yes
+	- LegacyPayPass=Yes
+	- LegacyAmex=Yes
+	- LegacyJCB=Yes
+	- LegacyCUP=Yes
+	- LegacyDPAS=Yes
+	- LegacyVISA=Yes
+- Changed default value of tag DF1B of Expresspay to 5-bytes "\x3C\x21\x00\x00\x00"
+
+Release notes for Version 03.00.00 (20181213)
+------------------------------------------------------------------------------------
+- Fixed PSE mutual list processing on invalid format during Read Record command
+- Fixed path of USDebit.cfg
+- Fixed Interac Other02 test case on SW1SW2=6A81
+
+Note:
+Flash KernelID = 0x41
+Use ACE v3.3.22
+
+
+Release notes for Version 02.00.06 (20180703)
+------------------------------------------------------------------------------------
+- Modified EmvGetData() function to handle Tag 9F2A-Kernel Id
+- Added EmvGetKernelId() API to get Kernel ID used in contactless
+- Added GetPaymentContext() API function, see tPaymentContext structure
+- Added IsCardPresent() API function
+- Added EmvGetTerminalContext(void) API function
+- Fixed wrong tlv data in AddAIDRecordToProcessingConfig() when length is more 
+than 128 bytes (wehn TDOL and DDOL has lengthy value)
+- Fixed crash on clear memory of CAKey/CRL list (DestroyCRLList() and 
+DestroyCAKeysList() functions)
+- Added SetTransSeqCounter() API to set Transaction Sequence Counter (9f41)
+- Added GetLibVersion() to get the AMPEMVL2 library version and build details
+- Fixed tag list collection data for contactless approved offline
+- Fixed Tlv data is empty when transaction is offline declined
+- Added EmvIsVisaDebitCanada() API to determine if the card is a Visa Debit 
+Canada
+- Added EmvIsToDisplayPreferredName() API to check if to display Preferred Name 
+based on Addtl Term Cap and Issuer Code Table
+- Added EmvIsInteracCard() API to determine if the last card used is an Interac 
+card. It can be invoked after Select Application process
+- Added Visa Debit Opt Out function for Interac card during Select Application
+	- See VisaDebitOptOut=No in agnos.ini
+	- Added EmvSetInteracVisaOptOut() API
+- Fixed issues for Android build
+- Added Android folder for Android ndk build
+- Fixed in US Debit final selection for the value of mADFOrderNumber. 
+	- The m_pPaymentContext->mADFOrderNumber should have the same value as the mutualList mCorrespondingAIDOrderNumber.
+- Fixed card blocked flag to set first before displaying callback message.
+
+Release notes for Version 02.00.05 (20171026)
+------------------------------------------------------------------------------------
+- Added WriteTlvDataToXml() API that writes TERMINAL, PROCESSING, ENTRY_POINT 
+configuration files to XML format
+- Added more transaction types in tConfigTransType
+
+Release notes for Version 02.00.04 (20171015)
+------------------------------------------------------------------------------------
+- Added CBPinRetries() callback to get remaining PIN retries during Offline PIN 
+entry
+- Changed default of IsMutualListEmpty() to TRUE
+- Fixed auto-selection of US Debit for contactless if AID is already eliminated
+- Added AMPAgnosAndroidIF for Android Interface
+- Added AMPAgnosTrans for higher level of EMV contact and contactless API 
+functions
+- Removed EmvQuickChipCompletion() call under EmvInitiateApplication()
+- EmvQuickChipCompletion() was moved to public header (Quick Chip API Interface). The function call will be controlled by the application side.
+- Added debug logs for ANDROID platform
+- Added SetIniPath() to set agnos.ini and AGNOS configuration paths
+- Forced Outcome result as ocONLINE_REQUEST for Refund declined transactions - For EMV Contactless
+- Little adjustments for ANDROID platform
+
+Release notes for Version 02.00.03 (20170722)
+------------------------------------------------------------------------------------
+- Fixed return value of EmvInitiateApplication() to ocEND_APPLICATION if PIN 
+entry is cancelled
+- Fixed Interac Test Case Select21, Primary AID is empty due to card blocked, 
+Secondary is not empty. It is now returning end application.
+- Fixed US Debit Manual Selection method, Global AIDs will not be eliminated 
+even with same IIN if candidate list doesn't contain any US Debit AID
+- Changed IsAIDUSDebit(), length of AID in USDebit.cfg is now the reference of 
+comparison instead of AID of ICC
+- Implemented US Debit Selection Modes
+	- Mode 0: Standard EMV selection
+	- Mode 1: Auto selection of US Debit AID (EMV contact and contactless)
+	- Mode 2: Manual selection (use for EMV contact only)
+- Changed EmvSelectLanguage() lstTIMEOUT and lstCANCEL to ocTRANSACTION_CANCELLED
+- Forced 2nd GenAC to Z3, AAC by forcing the TAC-Default B4b8=1 Transaction Exceed 
+Limit for EMV QuickChip transaction
+- Fixed IsAIDQuickChip(), length of AID QuickChip is now the reference of 
+comparison instead of AID of ICC
+- Additional fixed for cancel/timeout for language selection and application 
+selection
+- Added tTransactionalContext* EmvGetTransactionalContext(void) API to allow
+application layer to modify transaction information during run-time
+- Fixed return value of EmvSelectLanguage() API, it can now returns 
+Cancel/Timeout
+- Added IsCardBlocked() and IsMutualListEmpty() APIs
+- Fixed tag values of taglist collection when transaction is offline decline
+for EMV contact
+- Changed AUTH_DECLINED from "\x35\x31" to "\x30\x35" for 8A Authorisation 
+Response Code (ARC)
+- Fixed ADVT 6.1 TC29 SW1SW2=6A81 from ocNOT_ACCEPTED to ocEND_APPLICATION
+- Fixed missing BF0C "FCI Issuer Discretionary Data" in Mutual List
+	- fixed Application Selection for Interac Flash Contactless
+	- fixed Application Selection for US Debit Contactless
+- Fixed CID to ARQC (80) for QuickChip transaction
+
+Release notes for Version 02.00.02 (20170711)
+------------------------------------------------------------------------------------
+- Added synchronization of card enty technologies used by gpiTechnopolling() and 
+gpiPolling() through SetSupprtdCardEntry() API
+- Added GetCurrentLangCodeId() interface to get the current language that is being used by the 
+terminal
+- Removed display of Retry if the selected Application has an error (related to Amex AXP QC 018. Blocked 
+Card)
+- Added EmvSetExitStateFlow() interface to force exit the specific state of flow 
+of agnInitiateEMVTransaction(). A workaround for Cancel/Timeout during Online PIN Entry
+- Fixed Application Selection on Card Blocked (Amex AXP QC 018. Blocked Card)
+- Fixed CardEntryPolling(), it now return CARD_ENTRY_MULTI_CARD_TAP if card collision detected
+- Added multiple configuration capability
+	1. Setup Configuration Path
+		- int cAMPAgnos::SetConfigPath(const char *szPath) 	- for EMV contact/contactless transaction
+		- int cAMPAgnosConfig::SetConfigPath(const char *szPath) - -> for configuring Configuration files
+
+	2. Setup Configuration Filename
+		- int cAMPAgnos::SetConfigFile(const char *szFileName, tConfigType ConfigType) 	- for EMV contact/contactless transaction
+		- int cAMPAgnosConfig::SetConfigFile(const char *szFileName, tConfigType ConfigType) - -> for configuring Configuration files
+
+- Fixed Cancel/Timeout Offline PIN Entry (Plain Text and Enchiphered)
+- Fixed Language Preference when PSE application selection is selected
+- Added EmvSetTransPinBypass(BOOL bPinBypass) interface to set the transaction PinBypass
+- Fixed Final Application Selection for Interac
+- Added Kernel8 for Interac for ENTRY_POINT configuration
+- Added default tlv configurable parameters for Discover-DPAS and Interac-Flash for building ENTRY_POINT file
+
+
+Release notes for Version 02.00.01 (20170307)
+------------------------------------------------------------------------------------
+- Added detection of Mifare Desfire contactless card in CardEntryPolling() returns 
+CARD_MIFARE_TAP (see CARD_ENTRY enum structure in AMPAgnos.h)
+	- use SetMifareDetection(bEnable) API to enable Mifare Detection
+	- or set EnableMifareDetect parameter defined in agnos.ini file
+- Added EmvGetIssuerScriptResult() API function
+- Fixed PowerOn() function to return ocTRY_ANOTHER_INTERFACE for mute card scenario
+
+
+Release notes for Version 02.00.00 (20170223)
+------------------------------------------------------------------------------------
+- Fixed handling of CVM with Online PIN for Contactless transaction
+- Supports DPAS ZIP mode
+		- added configurable PPSEZIP=Yes in agnos.ini
+- Implemented Quick Chip features
+		- added configurable parameter QuickChip=Yes in agnos.ini
+		- added API functions
+				- int EmvSetEnableQuickChip(BOOL bEnableFlag )
+				- BOOL EMVIsQuickChipTrans(void);
+		- added "./QuickChip.cfg" file that contains AID list of Quick Chip
+			
+- Implemented US Common Debit Final Application Selection
+		- added configurable parameter USDebitAppSelect=Yes in agnos.ini
+		- added "./USDebit.cfg" file that defines US Common Debit AID list
+		- added API functions
+				- int EmvSetEnableUSDebitFinalAppSelect(BOOL bEnableFlag )
+
+- Modified AMPAGNOS_CB due to changes in Agnos callback
+		- Modified CBAppSelection(), removed unused AIDIndex parameter
+		- Changed CBSelectItemFromList(), it now uses arrItems[] to display items instead of parsing strList
+		- Modified CBOnlinePinEntry(), 
+				unsigned short	(*CBOnlinePinEntry) (const char *PAN, int PANlen, unsigned char *PinBlock, int *PinBlockLen);
+
+- Added SetIniTransData() API to initialize transaction data, see tInitTransData defined in AMPAgnos.h
+- Added GetIniTransData() API
+- Removed SetMaxPinLength() API
+- Added SetExpectedPinLen(), and GetExpectedPinLen()
+- Renamed GetLanguageCodeID() to GetDefLanguageCodeID()
+- Renamed SetLanguageCodeID() to SetDefLanguageCodeID()
+- Fixed Cashback amount not initialized properly
+- Fixed RemoveTapCard(), it calls gpiRemovalProcedure() to ensure CTLS reader closes properly
+
+- Rollup to latest Agnos Kernel v1.1.0 that supports Discover-DPAS, JCB/JSpeedy, Interac-Flash contactless
+		- Fixed SPED library
+				- Removed cbGpiDisplayMaskedPin() callback
+				- Fixed gpiSelectItemFromList(), changed strList to arrItems[]
+				- Removed sepMaxPinLength()
+				- Added sepSetExpectedPinLength(), sepGetExpectedPinLength()
+				- Modified gpiPINVerifyPlainText(), it now uses secured PED function, added gpiOfflinePinEntry() 
+				- Modified gpiPINVerifyCiphered(), it now uses secured PED function, invoked gpiOfflinePinEntry()
+		- Fixed Platform library
+				- Modified tGpiDisplayCallBack structure, removed cbGpiDisplayMaskedPin()
+		- Fixed CAD library
+				- Fixed gpiPowerOn(), returns SYSTEM_ERROR if CARD_MUTE
+				- Fixed gpiPowerOff(), include magstripe handling
+				- Fixed gpiTechnoPolling(), added gpiDisplayDelayUpdate() and gpiEmptyKeyPadCache()
+				- Added gpiPowerOffAllDevices() API
+
+Release notes for Version 01.00.07 (20161226)
+------------------------------------------------------------------------------------
+- Added internal LED indicator with RED status for ERROR processing, it can be 
+turned off by configuring ErrorLEDDisplay=No parameter defined in agnos.ini
+- Added ErrorLEDDisplay() Option=1: LED1-LED4 OFF; Option2: LED1-LED3 OFF, LED4 
+RED that can be added in outcome result in application layer for LED display Error processing
+- Added initialization of direct_fb for getting key pressed events, related to crash during CardEntryPolling() on kbhit()
+
+Release notes for Version 01.00.06 (20161218)
+------------------------------------------------------------------------------------
+- Fixed SetFieldTagValueAgnosConfig() API on handling of "Other TLVs" of ENTRY_POINT configuration
+- Added library restrictions on other platforms, it only runs on AMP terminals
+- Default transaction currency code (5f2a) can now be set in agnos.ini using "CurrencyCode" parameter
+
+
+Release notes for Version 01.00.05 (20161212)
+------------------------------------------------------------------------------------
+- Added SetTransCurrCode()and GetTransCurrCode() that allows the application layer to set the tag 5f2a (transaction currency code) during payment transaction
+- Added SetMaxPinLength() to set list of allowed PIN Length for internal offline PIN entry
+- Fixed twice prompt of declined message during offline declined
+- added agnos entrypoint, xgpiutils headers that allows application layer to access contactless primitive API functions
+- Removed Beep sound on contactless outcome, application layer should handle the beep sound
+
+Release notes for Version 01.00.04 (20161124)
+------------------------------------------------------------------------------------
+- Added SetPollingTimeOut() API function to override the internal card entry polling timeout for Entry Point during contactless transaction
+
+	//! Sets internal card polling timeout (in secs)
+	int SetPollingTimeOut(const unsigned int CardEntryTimeOut);
+
+	Note: 
+	By default, CardEntryPolling's Timeout is in synced with internal polling of EntryPoint during "Try Again".
+	This time SetPollingTimeOut() allows the application layer to change the timeout of Entrypoint for "TRY AGAIN"
+
+- Fixed RemoveCard() which is now won't prompt if the card has already been removed
+
+- Added TlvParams and ulTlvParamsLen arguments in AddRecordToAgnosConfig() API to opt application layer to configure set of tag parameters
+
+	//! Adds record to the given configuration (TERMINAL, PROCESSING, ENTRY_POINT)
+	int AddRecordToAgnosConfig(tConfigType CfgType, unsigned char KernelID, BYTE *AIDKey, unsigned char uAIDKeyLen, tProcessingType ProcType, tConfigTransType 
+	TransType, BYTE *TlvParams=NULL, unsigned long ulTlvParamsLen=0 );
+
+- Added new SetFieldTagValueAgnosConfig() API function this time with set of tags in TLV stream format to configure set of tag parameter
+
+	//! Sets the value of the specified tlv tags
+	int SetFieldTagValueAgnosConfig(tConfigType CfgType, unsigned char KernelID, BYTE *AIDKey, unsigned char uAIDKeyLen, tProcessingType ProcType,  tConfigTransType TransType, BYTE *TlvParams, unsigned long ulTlvParamsLen);
+
+- Added AMPAgnosConigTagDefs.h for tag reference that will be used in TERMINAL, PROCESSING, ENTRY_POINT configuration files
+- Fixed issue on adding record in PROCESSING when the sequence is AID-Contactless first then AID-Contact
+- Fixed SetFieldTagValueAgnosConfig() for tag 9f01 in PROCESSING. It now allows to modify or set the value of tag 9F01 (Acquirer ID) in PROCESSING record
+- Modified default values of AID-Contact record in PROCESSING, see AMPEMVL2 Developer's Guide
+
+Release notes for Version 01.00.03 (20161110)
+------------------------------------------------------------------------------------
+- Fixed GetRecordCountAgnosConfig() for TERMINAL config that always returns 1, it now returns 0 if TERMINAL.cfg is not loaded in the memory
+- Removed BeepError sound in CardEntryPolling if timeout occurs, it is up to application layer to put BeepError sound
+- Fixed AddlStatus parameter of CardEntryPolling which always returns 0x000D. It now returns the actual numeric value of key pressed
+- Modified CBDisplayMessage() where it now has MessageId parameter that allows the application layer to use MessageId instead of actual translated message in lang.ini
+- Synchronized timeout of internal polling of Entry Point during "Try Again" with the specified CardEntryTimeOut of CardEntryPolling() function
+
+Release notes for Version 01.00.02 (20161103)
+------------------------------------------------------------------------------------
+- Fixed UNABLE TO GO ONLINE scenario, (Auth Response Code=Y1, Z1, Y3, Z3)
+- Fixed tag collections for output tlv stream, it can now be set for offline approved and declined contactless 
+transactions
+- Added AMPEMPL2 version number display on the stdout
+
+Release notes for Version 01.00.01 (20161030)
+------------------------------------------------------------------------------------
+- Added ClearMemoryAgnosConfig() to freeup memory used in the loading and 
+storing configuration data
+- Added GetRecordCAKeysXml() to return the CAPK record struct from the CAKeys list
+- Added GetRecordCRLConfig() to return the CRL record struct from the CRL list
+- Optimized the speed of loading the CAKeys.xml
+- Fixed Get/SetFieldTagValue() for ENTRY_POINT configuration
+
+
+Release notes for Version 01.00.00
+------------------------------------------------------------------------------------
+ - Initial Implementation

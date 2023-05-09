@@ -1,0 +1,116 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!-- Disable transition -->
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+
+    <style name="AppTheme.AppText">
+        <item name="android:textSize">@dimen/font_size_content</item>
+    </style>
+
+    <style name="AppTheme.AppText.Title">
+        <item name="android:textSize">@dimen/font_size_title</item>
+    </style>
+
+    <style name="AppTheme.AppText.Subtitle">
+        <item name="android:textSize">@dimen/font_size_subtitle</item>
+    </style>
+
+    <style name="AppTheme.AppText.Note">
+        <item name="android:textSize">@dimen/font_size_note</item>
+    </style>
+
+    <style name="RobotoLight">
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="RobotoRegular">
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="RobotoMedium">
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="AMPFontBook_amount_large" parent="RobotoRegular">
+        <item name="android:textColor">@color/charcoal</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:letterSpacing">0.09</item>
+    </style>
+
+    <style name="AMPFontBook_section_header" parent="RobotoRegular">
+        <item name="android:textColor">@color/charcoal</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:letterSpacing">0.05</item>
+    </style>
+
+    <style name="AMPFontBook_body_bold" parent="RobotoMedium">
+        <item name="android:textColor">@color/charcoal</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:letterSpacing">0.05</item>
+    </style>
+
+    <style name="AMPFontBook_menu_header" parent="RobotoRegular">
+        <item name="android:textColor">@color/charcoal</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:letterSpacing">0.045</item>
+    </style>
+
+    <style name="AMPFontBook_body_copy" parent="RobotoLight">
+        <item name="android:textColor">@color/charcoal</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:letterSpacing">0.05</item>
+    </style>
+
+    <!-- this is also implemented in AMPButton styles -->
+    <style name="AMPFontBook_button_text" parent="RobotoMedium">
+        <item name="android:textColor">@color/charcoal</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:letterSpacing">0.07</item>
+    </style>
+
+    <style name="AMPFontBook_note" parent="RobotoRegular">
+        <item name="android:textColor">@color/ash_grey</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!-- Buttons style -->
+    <style name="AMPButton_style_grey">
+        <item name="android:layout_height">@dimen/button_height</item>
+        <item name="android:layout_width">@dimen/button_width</item>
+        <item name="android:layout_marginBottom">@dimen/white_spacer_point_five</item>
+        <item name="android:layout_marginTop">@dimen/white_spacer_point_five</item>
+        <item name="android:background">@drawable/button_grey</item>
+        <item name="android:elevation">@dimen/material_resting_elevation</item>
+        <item name="android:minWidth">@dimen/button_width</item>
+        <item name="android:textColor">@color/charcoal</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:letterSpacing">0.07</item>
+    </style>
+
+    <style name="AMPButton_style_turquoise">
+        <item name="android:layout_height">@dimen/button_height</item>
+        <item name="android:layout_width">@dimen/button_width</item>
+        <item name="android:layout_marginBottom">@dimen/white_spacer_point_five</item>
+        <item name="android:layout_marginTop">@dimen/white_spacer_point_five</item>
+        <item name="android:background">@drawable/button_turquoise</item>
+        <item name="android:elevation">@dimen/material_resting_elevation</item>
+        <item name="android:minWidth">@dimen/button_width</item>
+        <item name="android:textColor">@color/charcoal</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:letterSpacing">0.07</item>
+    </style>
+
+    <!--<style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />-->
+    <!--<style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />-->
+
+</resources>

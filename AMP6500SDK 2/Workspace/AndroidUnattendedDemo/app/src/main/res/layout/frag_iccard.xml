@@ -1,0 +1,350 @@
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/roundedlayout2"
+    android:padding="10dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="1dp"
+        >
+
+        <TextView
+            android:id="@+id/tvICCardStatus"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#1cd4c6"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="@string/textICCard"
+            android:textSize="30sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.6"
+        android:gravity="center_vertical"
+        android:background="#888888"
+        android:layout_marginBottom="2dp"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.25">
+
+        </View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.50">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.35"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvApdu"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/textApdu"
+                    android:gravity="center|right"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="25sp"/>
+
+                <TextView
+                    android:id="@+id/tvResponse"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/textResponse"
+                    android:gravity="center|right"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="25sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.65"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/etAPDU"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+                    android:inputType="text"/>
+
+                <EditText
+                    android:id="@+id/etResponse"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+                    android:inputType="text"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.25">
+
+        </View>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
+        android:background="#aaaaaa"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.18"/>
+
+            <Button
+                android:id="@+id/bStop"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.30"
+                android:text="@string/button_stop"
+                android:fontFamily="sans-sharif-thin"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:textColor="#FFFFFFFF"
+                android:background="@drawable/selectorbuttonpressed"
+                android:layout_gravity="center"
+
+                />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.04"/>
+
+
+            <Button
+                android:id="@+id/bStartSearch"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.30"
+                android:text="@string/button_start"
+                android:fontFamily="sans-sharif-thin"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:textColor="#FFFFFFFF"
+                android:background="@drawable/selectorbuttonpressed"
+                android:layout_gravity="center"
+
+                />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.18"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+<!--
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2" 
+        android:orientation="vertical">
+        
+        <TextView
+            android:id="@+id/tvICCardStatus"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/textICCard"
+            android:textColor="@color/myBlue2" 
+            android:gravity="center"/>
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4" 
+        android:background="@drawable/roundedlinearlayout"
+        android:orientation="vertical">
+		
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            >
+            <LinearLayout 
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.35"
+                android:orientation="vertical">
+                
+                <TextView 
+                    android:id="@+id/tvApdu"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/textApdu"
+                    android:gravity="center|right"
+                    android:textColor="@color/myAquaMarine"/>
+                
+                <TextView
+                    android:id="@+id/tvResponse" 
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/textResponse"
+                    android:gravity="center|right"
+                    android:textColor="@color/myAquaMarine"/>
+                
+            </LinearLayout>
+            
+            <LinearLayout 
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.65"
+                android:orientation="vertical">
+                
+                <EditText 
+                    android:id="@+id/etAPDU"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+                
+                <EditText 
+                    android:id="@+id/etResponse"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+                
+            </LinearLayout>
+        </LinearLayout>
+        
+        
+        
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2" 
+        android:gravity="center">
+		
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"
+            />
+        
+        <Button
+            android:id="@+id/bStartSearch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="@string/button_start" 
+            android:background="@drawable/selectorbuttonpressed"/>
+		
+         <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"
+            />
+        
+        <Button
+            android:id="@+id/bStop"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="@string/button_stop" 
+            android:background="@drawable/selectorbuttonpressed"/>
+        
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"
+            />
+    </LinearLayout>
+	
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        >
+        
+        <TextView
+            android:id="@+id/tvTimeout" 
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="@string/timeout"
+            android:textColor="#FFFFFF00"
+            android:gravity="center_vertical"
+            />
+        
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            />
+            
+        
+        <EditText 
+            android:id="@+id/etTimeout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:inputType="number"
+            android:text="30"
+            
+            />
+        
+    </LinearLayout>
+    
+    
+</LinearLayout> -->

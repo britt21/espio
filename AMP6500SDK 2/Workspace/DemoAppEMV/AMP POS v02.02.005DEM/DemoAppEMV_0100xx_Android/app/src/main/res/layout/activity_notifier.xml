@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Flow.NotifierActivity">
+
+    <include
+        android:id="@+id/include2"
+        layout="@layout/header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/screen_title"
+        style="@style/AMPFontBook_section_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="@dimen/material_resting_elevation"
+        android:gravity="center"
+        android:padding="@dimen/white_spacer_point_five"
+        android:text="Screen Title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include2" />
+
+    <View
+        android:id="@+id/notification_dimmer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/dimmer"
+        android:elevation="@dimen/dimmer_elevation"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/include2" />
+
+    <LinearLayout
+        android:id="@+id/notification_dialog"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/activity_vertical_margin"
+        android:background="@color/white"
+        android:elevation="@dimen/material_resting_elevation"
+        android:padding="@dimen/activity_horizontal_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/screen_title">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/prompt1"
+                style="@style/AMPFontBook_body_copy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:visibility="gone"
+                tools:text="Cancelled Cancelled Cancelled Cancelled" />
+
+            <TextView
+                android:id="@+id/prompt2"
+                style="@style/AMPFontBook_body_copy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:visibility="gone"
+                tools:text="Cancelled" />
+
+            <TextView
+                android:id="@+id/prompt3"
+                style="@style/AMPFontBook_body_copy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:visibility="gone"
+                tools:text="Cancelled" />
+
+            <TextView
+                android:id="@+id/prompt4"
+                style="@style/AMPFontBook_body_copy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:visibility="gone"
+                tools:text="Cancelled" />
+
+            <View
+                android:id="@+id/buttons_spacer"
+                android:layout_width="1dp"
+                android:layout_height="@dimen/white_spacer_times_two"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/buttons_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/btncancel"
+                    style="@style/AMPButton_style_grey"
+                    android:layout_width="0dp"
+                    android:layout_marginEnd="@dimen/white_spacer_point_five"
+                    android:layout_marginStart="@dimen/white_spacer_point_five"
+                    android:layout_weight="1"
+                    android:onClick="cancelButtonClicked"
+                    tools:text="@string/default_text" />
+
+                <Button
+                    android:id="@+id/btnenter"
+                    style="@style/AMPButton_style_turquoise"
+                    android:layout_width="0dp"
+                    android:layout_marginEnd="@dimen/white_spacer_point_five"
+                    android:layout_marginStart="@dimen/white_spacer_point_five"
+                    android:layout_weight="1"
+                    android:onClick="okButtonClicked"
+                    tools:text="@string/default_text" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cancel_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/btncancel2"
+                    style="@style/AMPButton_style_grey"
+                    android:layout_width="0dp"
+                    android:layout_marginEnd="@dimen/white_spacer_point_five"
+                    android:layout_marginStart="@dimen/white_spacer_point_five"
+                    android:layout_weight="1"
+                    android:onClick="cancelButtonClicked"
+                    tools:text="@string/default_text" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

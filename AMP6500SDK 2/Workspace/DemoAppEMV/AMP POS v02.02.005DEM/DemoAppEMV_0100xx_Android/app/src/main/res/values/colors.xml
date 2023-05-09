@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#50d2c2</color>
+    <color name="colorPrimaryDark">#37948b</color>
+    <color name="colorAccent">#50d2c2</color>
+
+    <color name="light_blue">#51bad7</color>
+    <color name="blue">#0971d2</color>
+    <color name="orange">#f9806d</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="teal">#009688</color>
+
+    <color name="charcoal">#4a4a4a</color>
+    <color name="turquoise">#2ed9d5</color>
+    <color name="pale_azure">#b9f3f1</color>
+    <color name="persian_green">#00a5a2</color>
+    <color name="base_grey">#f1f1f5</color>
+    <color name="ash_grey">#c6c9cf</color>
+    <color name="dark_grey">#4a4a4a</color>
+    <color name="light_grey">#eaeaea</color>
+    <color name="ripple_grey">#aaaaaa</color>
+    <color name="button_grey">#e7e7e7</color>
+    <color name="title_grey">#1d1d26</color>
+    <color name="bg_pale_grey">#EEEEEE</color>
+
+    <color name="line_divider_color">#f1f1f1</color>
+
+    <!-- "dialog" dimmer -->
+    <color name="dimmer">#66000000</color>
+</resources>

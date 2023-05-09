@@ -1,0 +1,7 @@
+out/target/product/msm8909/obj/lib/crtbrand.s: \
+ bionic/libc/bionic/crtbrand.c bionic/libc/include/stdint.h \
+ /home/panjp/9220-wk/workspace/output/new9220_amp_develop/android-k/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.8/lib/gcc/arm-linux-androideabi/4.8/include/stddef.h \
+ bionic/libc/include/machine/wchar_limits.h
+ bionic/libc/bionic/crtbrand.c bionic/libc/include/stdint.h :
+ /home/panjp/9220-wk/workspace/output/new9220_amp_develop/android-k/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.8/lib/gcc/arm-linux-androideabi/4.8/include/stddef.h :
+ bionic/libc/include/machine/wchar_limits.h :

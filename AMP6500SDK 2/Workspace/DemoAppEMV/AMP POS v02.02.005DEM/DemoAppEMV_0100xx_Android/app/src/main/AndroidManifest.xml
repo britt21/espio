@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.amobilepayment.demo">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.REORDER_TASKS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name=".Main.AmpApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/logo_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/logo_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Main.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Main.MenuActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".Flow.CardEntryActivity" />
+        <activity android:name=".Flow.CardEntryManualActivity" />
+        <activity android:name=".Flow.CVVEntryManualActivity" />
+        <activity android:name=".Flow.ExpiryEntryManualActivity" />
+        <activity android:name=".Flow.HostCommsActivity" />
+        <activity android:name=".Flow.AmountSummaryActivity" />
+        <activity android:name=".Flow.TurnUnitCustomerActivity" />
+        <activity android:name=".Flow.NotificationActivity" />
+        <activity android:name=".Security.PinEntryActivity" />
+        <activity android:name=".Flow.AmountEntryActivity" />
+        <activity
+            android:name=".Flow.AmountEntryRegularActivity"
+            android:windowSoftInputMode="stateVisible" />
+        <activity android:name=".Flow.GenericListActivity" />
+        <activity android:name=".Flow.TransactionDetailsActivity" />
+        <activity
+            android:name=".Flow.UserInputEntryActivity"
+            android:windowSoftInputMode="stateVisible" />
+        <activity android:name=".Flow.NotifierActivity" />
+        <activity android:name=".Flow.NotifierEMVActivity" />
+        <activity android:name=".Flow.SelectionActivity" />
+        <activity android:name=".Flow.SelectionEMVActivity" />
+        <activity android:name=".TMS.CheckUpdateActivity" />
+        <activity android:name=".TMS.NotifierActivity" />
+        <activity android:name=".TMS.TMSSettingsActivity" />
+
+        <uses-library android:name="com.pos.device" />
+
+        <activity android:name=".Flow.BaseActivity" />
+
+        <!-- Client App Handling (a proof of concept) -->
+
+        <service
+            android:name=".Main.AdminLockDownService"
+            android:exported="false" />
+
+        <receiver
+            android:name=".receiver.BootBroadcastReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_pale_grey"
+    tools:context="com.amobilepayment.tsys.Main.MenuActivity" >
+
+    <include layout="@layout/header"/>
+
+    <GridView
+        android:id="@+id/gridView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:stretchMode="columnWidth"
+        android:numColumns="1"
+        android:verticalSpacing="@dimen/activity_vertical_margin"
+        android:horizontalSpacing="@dimen/activity_horizontal_margin"
+        android:clipToPadding="false"
+        android:padding="@dimen/activity_vertical_margin"
+        android:scrollbars="none"
+        android:drawSelectorOnTop="true"
+        />
+</LinearLayout>

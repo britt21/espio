@@ -1,0 +1,9 @@
+out/target/product/msm8909/obj/lib/crtbegin_so.o: \
+ bionic/libc/arch-common/bionic/crtbegin_so.c \
+ bionic/libc/arch-common/bionic/__dso_handle_so.h \
+ bionic/libc/arch-common/bionic/atexit.h \
+ /home/panjp/9220-wk/workspace/output/new9220_amp_develop/android-k/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.8/lib/gcc/arm-linux-androideabi/4.8/include/stddef.h
+ bionic/libc/arch-common/bionic/crtbegin_so.c :
+ bionic/libc/arch-common/bionic/__dso_handle_so.h :
+ bionic/libc/arch-common/bionic/atexit.h :
+ /home/panjp/9220-wk/workspace/output/new9220_amp_develop/android-k/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.8/lib/gcc/arm-linux-androideabi/4.8/include/stddef.h :

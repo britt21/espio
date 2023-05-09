@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.amobilepayment.androidunattendeddemo.MainActivity"
+    android:background="#000000"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/fragContainer"
+        android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="0.85"
+    android:background="@drawable/roundedlayout"
+    android:layout_marginBottom="5dp"
+        android:orientation="vertical"
+        >
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.15"
+        android:background="@drawable/roundedlayout2"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="7dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:paddingBottom="7dp"
+            android:text="HOME PAGE"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/selectorbuttonpressed"
+            android:onClick="bHomePage"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

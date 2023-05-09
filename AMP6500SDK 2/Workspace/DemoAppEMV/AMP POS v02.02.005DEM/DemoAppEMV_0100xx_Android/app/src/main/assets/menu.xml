@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Please note that if you add / remove an item here, you must edit the corresponding entry
+     in InternalCfg.xml (TERMINAL->MENUCFG). The hierarchy of this file should also be reflected
+     in the config file.
+-->
+<menu type="mmenu">
+
+    <!-- DESKTOP MENU -->
+    <desktop>
+        <menu type="desktop">
+            <item permission="TERMINAL.PASSWORDOPTION.MENU.OPERATOR">
+                <name industry="FR">MENU_SALE</name>
+            </item>
+        </menu>
+    </desktop>
+
+    <!-- MAIN MENU -->
+    <item>
+        <name industry="all">MENU_TRANSACTIONS</name>
+        <menu type="smenu">
+            <item permission="TERMINAL.PASSWORDOPTION.MENU.OPERATOR">
+                <name industry="FR">MENU_SALE</name>
+            </item>
+        </menu>
+    </item>
+</menu>

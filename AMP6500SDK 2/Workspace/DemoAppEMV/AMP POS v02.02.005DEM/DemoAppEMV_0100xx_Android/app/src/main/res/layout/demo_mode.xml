@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/demo_mode_layout"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+    <TextView
+        style="@style/AMPFontBook_body_copy"
+        android:layout_width="18sp"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        android:layout_margin="2dp"
+        android:layout_gravity="center_vertical"
+        android:textStyle="bold"
+        android:textSize="@dimen/font_size_content"
+        android:textColor="#ff0000"
+        android:text="DEMO"
+        android:lines="4"
+        android:background="@drawable/demo_mode_border">
+
+    </TextView>
+</FrameLayout>

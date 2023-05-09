@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Android Unattended Demo</string>
+
+    <string name="homePage">Home</string>
+
+
+    <string name="tabPrinter">"Printer"</string>
+    <string name="tabNFC">"NFC"</string>
+    <string name="tabMagnetic">"Magnetic"</string>
+    <string name="tabICCard">"IC Card"</string>
+    <string name="tabPed">"PED"</string>
+
+    <string name="button_start">"START"</string>
+    <string name="button_stop">"STOP"</string>
+
+
+
+    <string name="textMagneticCard">MAGNETIC CARD (Press Start search)</string>
+    <string name="textSwipeCard">Please Swipe the Card now</string>
+    <string name="timeout">TIME OUT (sec)</string>
+    <string name="textTrack1Status">Track1 Status</string>
+    <string name="textTrack2Status">Track2 Status</string>
+    <string name="textTrack3Status">Track3 Status</string>
+    <string name="data">Data</string>
+
+    <string name="textICCard">IC CARD (Press Start search)</string>
+    <string name="textInsertCard">Please Insert the Card now</string>
+    <string name="textApdu">APDU</string>
+    <string name="textResponse">Response</string>
+
+    <string name="textPICCard">Contactless CARD (Press Start search)</string>
+    <string name="textProximity">Place the card within range of the reader</string>
+    <string name="textUid">UID</string>
+
+    <string name="textSerialPort">Serial Port RS232</string>
+    <string name="sendData">Send Data</string>
+    <string name="receivedData">Received Data</string>
+</resources>
